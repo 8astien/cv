@@ -1,0 +1,246 @@
+
+main {
+    height: 75vh;
+    width: 100%;
+    background-color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__section {
+    background-color: #e0583c;
+    width: 100%;
+    height: 18.75vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;       
+    text-align: center;      
+    align-items: center;
+    transition: all 600ms;
+}
+
+.main__section:first-child {
+    margin-top: 25vh;
+}
+
+.main__section--title {
+    color: rgb(255, 248, 238);
+}
+
+.main__content {
+    color: rgb(241, 238, 236);
+    display: none;
+    justify-content: center;
+}
+
+.main__content > * {
+    width: 75%;
+}
+
+.main__content > h4 {
+    color: bisque;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.main__content--list {
+    width: 75%;
+}
+
+.main__content--listItem {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+    transition: all 300ms ease;
+    cursor: default;
+}
+
+.main__content--listItem > i {
+    margin: 0 1.5rem;
+}
+
+.double__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main__content--sdy {
+    font-weight: lighter;
+}
+
+/*********** TILES COLOR **********/
+
+.main__section:nth-child(1) {
+    background-color: #462f2f;   
+}
+
+.main__section:nth-child(2) {
+    background-color: #563330;
+}
+
+.main__section:nth-child(3) {
+    background-color: #803b30;
+}
+
+.main__section:nth-child(4) {
+    background-color: #a04736;
+}
+
+/****************** DL BUTTON *************/
+
+.btn__dl {
+    margin-top: 1rem;
+    width: 50%;
+    color: bisque;
+    background: none;
+    border: 2px solid #e0583c;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+.btn__dl span{
+	position: relative;
+	z-index: 3;	
+}
+
+.btn__dl:hover {
+    color: rgb(255, 248, 238);           
+}
+
+.btn__dl::before{
+    content: '';
+    background-color: #e0583c;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: all 500ms;
+}
+
+.btn__dl::before{
+    top: 0;
+    left: -100%;
+}
+
+.btn__dl:hover::before{
+    top: 0;
+    left: 0;
+}
+
+/************** CONTACT PANEL *************/
+.social__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social__items {
+    width: 50%;
+}
+
+.socials {
+    text-decoration: none;
+    color: #e0583c;
+    font-size: 2rem;
+    margin: 1rem;
+    transition: all 200ms;
+}
+
+.linkedin:hover {
+    color: #0e76a8;
+}
+
+.twitter:hover {
+    color: #1dcaff;
+}
+
+.email:hover {
+    color: #beca15;
+}
+
+.phone:hover {
+    color: #20cc62;
+}
+
+/*********** ANIMATIONS TRIGGER **********/
+
+.main__section:hover{
+    background-color: rgb(40, 39, 44);
+    height: 75vh;
+    width: 100%;
+}
+
+.main__section:nth-child(3):hover {
+    height: 100vh;
+}
+
+.main__section:hover .main__section--title {
+    color: bisque;
+}
+
+.main__section:hover .main__content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__content--listItem:hover {
+    color: #e0583c;
+}
+
+@media (min-width: 900px) {
+    
+    main {
+        flex-wrap: nowrap;
+    }
+    
+    .main__section {
+        width: 25%;
+        height: 100%;
+        margin-top: 25vh;  
+    }
+    
+    .main__section:hover{
+        height: 75vh;
+        width: 75%;
+    }
+    
+    .header__bio{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    
+    .main__section:nth-child(3):hover {
+        height: 75vh;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media(hover: hover) and (pointer: fine) {
+    
+    .main__section:hover{
+        background-color: rgb(40, 39, 44);
+        height: 75vh;
+        width: 100%;
+    }
+    
+    .main__section:hover .main__section--title {
+        color: bisque;
+    }
+    
+    .main__section:hover .main__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

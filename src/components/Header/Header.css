@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(40, 39, 44);
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 248, 238);
+}
+
+header{
+    display: flex;
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(40, 39, 44);
+    justify-content: space-around;
+    position: fixed;
+}
+
+.header__titles--main{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.header__titles--sdy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.header__bio{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+.header__titles, .header__bio {
+    width: 40%;
+    text-align: center;
+    align-self: center;
+}
